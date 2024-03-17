@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routine Details</title>
+    <style>
+        body {
+            background-image: url('routine3.jpeg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Routine Details</h1>
+        <div id="routineDetails">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const routineName = params.get('routine');
+            if (!routineName) {
+                alert("Routine name not provided!");
+                window.location.href = '/';
+            } else {
+                fetch('/routine.json')
+                .then(response => response.json())
+                .then(data => {
+                    const routine = data.routines.find(routine => routine.name === routineName);
+                    if (routine) {
+                        const routineDetailsContainer = document.getElementById("routineDetails");
+                        routineDetailsContainer.innerHTML = `<h2>${routine.name}</h2><ul>${routine.practices.map(practice => `<li>${practice}</li>`).join('')}</ul>`;
+                    } else {
+                        alert("Routine not found!");
+                        window.location.href = '/';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("Failed to fetch routine details!");
+                    window.location.href = '/';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

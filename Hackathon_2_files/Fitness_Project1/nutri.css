@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.nutrition-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+.nutrition-intro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.nutrition-intro p {
+    max-width: 600px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.nutrition-cards {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card p {
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.nutrition-cards::-webkit-scrollbar {
+    height: 10px;
+}
+
+.nutrition-cards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.nutrition-cards::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.nutrition-cards::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

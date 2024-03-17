@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('a_1.2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 8px;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            color: #333;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .non-registered {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .non-registered a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        .non-registered a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>New User Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
+            <input type="Text" name="Address" id="Address" placeholder="Address">
+            <input type="submit" value="Register">
+        </form>
+        <div class="non-registered">
+            Already have an account? <a href="form.html">Login Here</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").onsubmit = function(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            let validationMessage = "";
+
+            if (name.trim() === "") validationMessage += "Name is required.\n";
+            if (email.trim() === "") validationMessage += "Email is required.\n";
+            if (password.trim() === "") validationMessage += "Password is required.\n";
+
+            if (validationMessage === "") {
+                alert("Registration successful!");
+              
+            } else {
+                alert(validationMessage);
+            }
+        };
+    </script>
+</body>
+</html>

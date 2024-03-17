@@ -1,0 +1,149 @@
+{
+    "routines": [
+      {
+        "name": "Morning Stretch",
+        "practices": ["Neck Stretch", "Shoulder Stretch", "Arm Circles", "Torso Twist", "Leg Stretch", "Calf Stretch"]
+      },
+      {
+        "name": "Full Body Workout",
+        "practices": ["Push-ups", "Squats", "Lunges", "Plank", "Crunches", "Jumping Jacks"]
+      },
+      {
+        "name": "Cardio Blast",
+        "practices": ["Running", "Cycling", "Jump Rope", "High Knees", "Burpees", "Box Jumps"]
+      },
+      {
+        "name": "Yoga Flow",
+        "practices": ["Sun Salutation", "Warrior Pose", "Tree Pose", "Downward Facing Dog", "Child's Pose", "Corpse Pose"]
+      },
+      {
+        "name": "Upper Body Strength",
+        "practices": ["Pull-ups", "Bench Press", "Dumbbell Rows", "Tricep Dips", "Bicep Curls", "Shoulder Press"]
+      },
+      {
+        "name": "Lower Body Blast",
+        "practices": ["Deadlifts", "Leg Press", "Leg Curls", "Calf Raises", "Glute Bridges", "Step-ups"]
+      },
+      {
+        "name": "Core Crusher",
+        "practices": ["Russian Twists", "Plank Variations", "Leg Raises", "Bicycle Crunches", "Mountain Climbers", "Hollow Body Hold"]
+      },
+      {
+        "name": "Pilates Power",
+        "practices": ["Roll Up", "Hundreds", "Leg Circles", "Side Leg Lifts", "Plank with Leg Lift", "Swimming"]
+      },
+      {
+        "name": "Flexibility Focus",
+        "practices": ["Hamstring Stretch", "Quad Stretch", "Hip Flexor Stretch", "Pigeon Pose", "Butterfly Stretch", "Seated Forward Bend"]
+      },
+      {
+        "name": "HIIT Havoc",
+        "practices": ["Interval Sprints", "Jump Squats", "Mountain Climbers", "Burpee with Push-up", "High Knees", "Tuck Jumps"]
+      },
+      {
+        "name": "CrossFit Challenge",
+        "practices": ["Thrusters", "Kettlebell Swings", "Box Jumps", "Toes-to-Bar", "Wall Balls", "Rowing"]
+      },
+      {
+        "name": "Tabata Torture",
+        "practices": ["Squats", "Push-ups", "Sit-ups", "Burpees", "Lunges", "Mountain Climbers"]
+      },
+      {
+        "name": "Bodyweight Burn",
+        "practices": ["Chair Dips", "Tricep Push-ups", "Pistol Squats", "Walking Lunges", "Plank with Leg Lift", "Plyometric Push-ups"]
+      },
+      {
+        "name": "Strength Circuit",
+        "practices": ["Dumbbell Squat Press", "Renegade Rows", "Reverse Lunges", "Chest Flyes", "Bent-over Rows", "Tricep Kickbacks"]
+      },
+      {
+        "name": "Endurance Endevour",
+        "practices": ["Long-distance Running", "Swimming Laps", "Cycling for Distance", "Rowing Intervals", "Stair Climbing", "Hiking Trails"]
+      },
+      {
+        "name": "Stability Series",
+        "practices": ["Balance Board Squats", "Bosu Ball Push-ups", "Stability Ball Crunches", "Single-leg Deadlifts", "Medicine Ball Twists", "TRX Rows"]
+      },
+      {
+        "name": "Flex Friday",
+        "practices": ["Yoga Flow", "Pilates Power", "Stretching Routine", "Foam Rolling", "Thai Massage", "Self Myofascial Release"]
+      },
+      {
+        "name": "Weekend Warrior",
+        "practices": ["Hiking", "Rock Climbing", "Kayaking", "Beach Volleyball", "Mountain Biking", "Surfing"]
+      },
+      {
+        "name": "Meditation Madness",
+        "practices": ["Mindfulness Meditation", "Guided Visualization", "Body Scan Meditation", "Loving-kindness Meditation", "Breath Awareness", "Walking Meditation"]
+      },
+      {
+        "name": "Functional Fitness",
+        "practices": ["Farmers Walk", "Sledgehammer Swings", "Sandbag Lunges", "Tire Flips", "Battle Ropes", "Box Step-ups"]
+      },
+      {
+        "name": "Interval Insanity",
+        "practices": ["Sprint Intervals", "Tabata Protocol", "Hill Sprints", "Track Intervals", "Fartlek Training", "Stair Climber Intervals"]
+      },
+      {
+        "name": "Dance Party",
+        "practices": ["Zumba", "Hip-hop Dance", "Salsa", "Bollywood Dance", "Swing Dance", "Belly Dancing"]
+      },
+      {
+        "name": "Strength Endurance",
+        "practices": ["Deadlifts", "Squats", "Pull-ups", "Push-ups", "Dips", "Farmer's Walk"]
+      },
+      {
+        "name": "Swim Workout",
+        "practices": ["Freestyle", "Backstroke", "Breaststroke", "Butterfly", "Flip Turns", "Kicking Drills"]
+      },
+      {
+        "name": "Adventure Yoga",
+        "practices": ["Beach Yoga", "Yoga on Stand-up Paddleboard", "Yoga on Mountain Summit", "Yoga on the Rocks", "Yoga in the Forest", "Yoga at Sunset"]
+      },
+      {
+        "name": "Urban Exploration",
+        "practices": ["Parkour in City Streets", "Exploring Abandoned Buildings", "Skateboarding", "BMX Biking", "Street Soccer", "Street Basketball"]
+      },
+      {
+        "name": "Mindful Movement",
+        "practices": ["Tai Chi", "Qi Gong", "Walking Meditation", "Yoga Nidra", "Slow Flow Yoga", "Body Scan Meditation"]
+      },
+      {
+        "name": "Outdoor Calisthenics",
+        "practices": ["Pull-ups on Tree Branches", "Push-ups on Park Benches", "Dips on Parallel Bars", "Lunges on Trails", "Planks on Rocks", "Squats on Stairs"]
+      },
+      {
+        "name": "Extreme Endurance",
+        "practices": ["Ultra-marathon", "Ironman Triathlon", "24-hour Adventure Race", "Cross-country Cycling", "Open Water Swimming", "Death Valley Ultramarathon"]
+      },
+      {
+        "name": "Family Fitness Fun",
+        "practices": ["Family Walk in the Park", "Backyard Soccer Match", "Bike Ride Together", "Home Yoga Session", "Dance Party in Living Room", "Obstacle Course in Yard"]
+      },
+      {
+        "name": "Wilderness Workout",
+        "practices": ["Trail Running", "Hiking with Weighted Backpack", "Climbing Trees", "Rock Hopping in River", "Bear Crawls", "Log Carries"]
+      },
+      {
+        "name": "Mind-Body Harmony",
+        "practices": ["Yin Yoga", "Meditation Retreat", "Mindful Eating", "Walking in Nature", "Deep Breathing Exercises", "Journaling Practice"]
+      },
+      {
+        "name": "Adventurous Asanas",
+        "practices": ["Yoga on Cliffs", "Beach Yoga", "Mountain Peak Yoga", "Sunrise Yoga", "Partner Yoga", "Yoga at Waterfalls"]
+      },
+      {
+        "name": "Traveler's Workout",
+        "practices": ["Hotel Room Workout", "Airport Exercise Routine", "Walking Tours in Cities", "Swimming in Hotel Pools", "Hiking in Nature Reserves", "Outdoor Fitness Parks"]
+      },
+      {
+        "name": "Holiday Fitness",
+        "practices": ["Thanksgiving Turkey Trot", "Christmas Day Family Walk", "New Year's Day Hike", "Easter Egg Hunt Sprint", "4th of July Beach Volleyball", "Labor Day Park Picnic"]
+      },
+      {
+        "name": "Posture Perfect",
+        "practices": ["Pilates for Posture", "Standing Desk Stretches", "Back Strengthening Exercises", "Neck Alignment Exercises", "Core Strengthening for Stability", "Yoga for Spinal Alignment"]
+      }
+    ]
+  }
+  

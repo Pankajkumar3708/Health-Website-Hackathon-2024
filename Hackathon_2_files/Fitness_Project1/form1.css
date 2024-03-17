@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.header {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+h1 {
+    font-size: 2em; 
+    margin: 0; 
+}
+
+form {
+    max-width: 300px;
+    margin: auto;
+}

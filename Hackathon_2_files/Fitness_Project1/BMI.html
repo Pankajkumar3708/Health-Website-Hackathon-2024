@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator & Workout Plans</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Crunch.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+.workout-plan {
+    margin-top: 30px;
+    text-align: left;
+    display: none;
+}
+
+.workout-plan h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.workout-plan p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.workout-plan img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+.BMI img {
+    width: 200px; 
+    height: auto;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>BMI Calculator & Workout Plans</h2>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" step="0.01" required><br><br>
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" step="0.01" required><br><br>
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div class="result" id="result"></div>
+
+    <div class="workout-plan" id="workout-plan" style="display: none;">
+        <h3>Recommended Workout Plan</h3>
+        <div id="workout-content"></div>
+    </div>
+</div>
+
+<script>
+function calculateBMI() {
+    var weight = parseFloat(document.getElementById('weight').value);
+    var height = parseFloat(document.getElementById('height').value);
+    var bmi = weight / (height * height);
+    var result = document.getElementById('result');
+    var workoutPlan = document.getElementById('workout-plan');
+
+    if (isNaN(bmi)) {
+        result.innerHTML = "Please enter valid input";
+        workoutPlan.style.display = "none";
+        return;
+    }
+
+    result.innerHTML = "Your BMI is: " + bmi.toFixed(2) + "<br>";
+
+    if (bmi < 18.5) {
+        result.innerHTML += "Underweight - You may want to consider increasing your calorie intake and incorporating strength training exercises.";
+        showWorkoutPlan('underweight');
+    } else if (bmi >= 18.5 && bmi < 25) {
+        result.innerHTML += "Normal weight - Maintain a balanced diet and continue regular physical activity.";
+        showWorkoutPlan('normal');
+    } else if (bmi >= 25 && bmi < 30) {
+        result.innerHTML += "Overweight - Focus on a balanced diet, portion control, and regular aerobic exercises such as walking, cycling, or swimming.";
+        showWorkoutPlan('overweight');
+    } else {
+        result.innerHTML += "Obese - Consult with a healthcare professional for a personalized diet and exercise plan.";
+        showWorkoutPlan('obese');
+    }
+}
+
+function showWorkoutPlan(bmiCategory) {
+    var workoutContent = document.getElementById('workout-content');
+    workoutContent.innerHTML = "";
+
+    var workoutPlans = {
+        'underweight': {
+            'title': 'Workout Plan for Underweight',
+            'description': 'For underweight individuals, focus on gaining muscle mass and strength through resistance training exercises. Aim for compound exercises that target multiple muscle groups such as squats, deadlifts, bench presses, and rows. Include sufficient protein in your diet to support muscle growth and recovery.',
+            'image': 'skinny.jpg'
+        },
+        'normal': {
+            'title': 'Maintenance Workout Plan',
+            'description': 'For individuals with normal BMI, maintain your fitness level by incorporating a combination of cardiovascular exercises (such as running, cycling, or swimming) and strength training exercises (such as bodyweight exercises, weightlifting, or resistance band workouts). Remember to vary your workouts to prevent boredom and plateaus.',
+            'image': 'normal-guy.jpg'
+        },
+        'overweight': {
+            'title': 'Workout Plan for Overweight',
+            'description': 'For overweight individuals, focus on burning calories through regular aerobic exercises such as brisk walking, jogging, cycling, or elliptical training. Additionally, incorporate strength training exercises to build muscle mass and boost metabolism. Aim for a combination of cardiovascular and resistance training workouts for optimal results.',
+            'image': 'high-bmi.jpg'
+        },
+        'obese': {
+            'title': 'Consultation with a Professional Trainer',
+            'description': 'For individuals with obesity, it is recommended to consult with a certified fitness professional or healthcare provider to create a personalized workout plan tailored to your specific needs, limitations, and goals. Focus on gradual progress, sustainable lifestyle changes, and overall health improvement.',
+            'image': 'images/obese-workout.jpg'
+        }
+    };
+
+    var plan = workoutPlans[bmiCategory];
+    workoutContent.innerHTML += "<h3>" + plan.title + "</h3>";
+    workoutContent.innerHTML += "<p>" + plan.description + "</p>";
+    workoutContent.innerHTML += "<img src='" + plan.image + "' alt='" + plan.title + "'>";
+    document.getElementById('workout-plan').style.display = "block";
+}
+</script>
+</body>
+</html>
